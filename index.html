@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+
+<title>Factorial</title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<style>
+
+	#display {
+	position:absolute;
+	top:108px;
+	left:65px;
+	}
+	
+	#div1 {
+	position;relative;
+	}
+	
+	#factorial {
+		margin-bottom:20px;
+	
+	}
+
+</style>
+
+</head>
+
+		<h2>Factorial</h2>
+
+		<input name="factorial" id="factorial" placeholder="Enter number">
+
+		<button id="clickBtn">GO</button>
+	
+		<div id="div1">Result: <div id="display"></div></div>
+		
+
+		<script>
+		
+		// run function after clicking
+		document.getElementById("clickBtn").onclick=function() {
+			// variables 
+			var i, no, fact;
+			fact=1;
+			// chenge input field 
+			no=Number(document.getElementById("factorial").value);
+			
+			// validation 
+			if (no<0 || !$.isNumeric($("#factorial").val())) {
+			
+			document.getElementById("display").innerHTML="Enter corret value";
+			
+			} else {
+			
+			// mnozenie fact= fact*i; dopóki i mniejsze od wpisanej liczby no
+			for(i=1; i<=no; i++)  
+				{
+					fact= fact*i;
+				}  
+					// change dive content after factorial calculation
+					document.getElementById("display").innerHTML=value= fact;
+					
+				}
+					
+		}
+			
+		
+</script>
+		
+	</body>
+</html>
+
+
+
